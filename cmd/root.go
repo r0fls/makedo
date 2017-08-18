@@ -81,10 +81,10 @@ func run(cmd *cobra.Command, args []string) {
 		panic(err)
 	}
 
-	for key, value := range doMap {
-		if key == command {
-			do(doMap, value["commands"], value["depends"])
-		}
+	if value, ok := doMap[command]; ok {
+		do(doMap, value["commands"], value["depends"])
+	} else {
+		panic(ok)
 	}
 }
 
@@ -93,7 +93,6 @@ func runCommands(commands []string) {
 	for _, command := range commands {
 		args := strings.Fields(command)
 		out, err := exec.Command(args[0], args[1:]...).Output()
-
 		if err != nil {
 			panic(err)
 		}
