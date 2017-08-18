@@ -13,7 +13,7 @@
 
 package main
 
-import "github.com/r0fls/makedo/cmd"
+import "github.com/r0fls/conjure/cmd"
 
 func main() {
 	cmd.Execute()
