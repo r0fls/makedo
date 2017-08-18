@@ -84,7 +84,7 @@ func run(cmd *cobra.Command, args []string) {
 	if value, ok := doMap[command]; ok {
 		do(doMap, value["commands"], value["depends"])
 	} else {
-		panic(ok)
+		fmt.Println("Command not found:", command)
 	}
 }
 
