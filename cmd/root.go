@@ -42,15 +42,15 @@ var RootCmd = &cobra.Command{
 	Run: run,
 }
 
-func loadConjureFile() ([]byte, error) {
-	filenames := []string{"conjure.yaml", "conjure.yml", "Conjure.yaml", "Conjure.yaml"}
+func loadMakedo() ([]byte, error) {
+	filenames := []string{"makedo.yaml", "makedo.yml", "Makedo.yaml", "makedo.yaml"}
 	for _, filename := range filenames {
 		data, err := ioutil.ReadFile(filename)
 		if err == nil {
 			return data, nil
 		}
 	}
-	return nil, errors.New("You must have a makedo file with one of the names: conjure.yaml, Conjure,yaml, conjure.yml, or Conjure.yml")
+	return nil, errors.New("You must have a makedo file with one of the names: mmakedo.yaml, Makedo,yaml, makedo.yml, or Makedo.yml")
 }
 
 func run(cmd *cobra.Command, args []string) {
@@ -66,7 +66,7 @@ func run(cmd *cobra.Command, args []string) {
 	var err error
 
 	if opts.doFile == "" {
-		data, err = loadConjureFile()
+		data, err = loadMakedo()
 	} else {
 		data, err = ioutil.ReadFile(opts.doFile)
 		if err != nil {

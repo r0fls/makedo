@@ -1,15 +1,15 @@
-# conjure
+# makedo
 
 ## Installation
 
 ```
-go install github.com/r0fls/conjure
+go install github.com/r0fls/makedo
 ```
 
 ## Example
 
 
-**conjure.yaml**
+**makedo.yaml**
 ```yaml
 shoes:
   depends:
@@ -22,10 +22,10 @@ socks:
     - echo putting on socks
 ```
 
-Then run the `shoes` step with the command `conjure shoes`:
+Then run the `shoes` step with the command `makedo shoes`:
 
 ```shell
- $ conjure shoes
+ $ makedo shoes
 putting on socks
 putting on shoes
 ```
