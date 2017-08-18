@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-go get github.com/r0fls/makedo
+go install github.com/r0fls/makedo
 ```
 
 ## Example
