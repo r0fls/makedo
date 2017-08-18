@@ -55,12 +55,12 @@ func loadMakedo() ([]byte, error) {
 
 func run(cmd *cobra.Command, args []string) {
 
-	command := args[0]
-
 	if len(args) == 0 {
 		fmt.Println("Must supply a command to do.")
 		os.Exit(1)
 	}
+
+	command := args[0]
 
 	var data []byte
 	var err error
