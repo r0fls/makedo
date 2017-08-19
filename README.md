@@ -1,5 +1,11 @@
 # makedo
 
+## Motivation
+
+This was inspired by the blog post [Afraid of Makefiles? Don't be!](https://matthias-endler.de/2017/makefiles/)
+
+Personally, I'm still scared of makefiles! Just kidding, they're fine. Anyway, if you want to use this interactively, I suggest converting the rest of the example from that blog to a makedo.yaml file. It's really quite simple. :ghost:
+
 ## Installation
 
 ```
