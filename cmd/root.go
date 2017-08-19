@@ -50,7 +50,7 @@ func loadMakedo() ([]byte, error) {
 			return data, nil
 		}
 	}
-	return nil, errors.New("You must have a makedo file with one of the names: mmakedo.yaml, Makedo,yaml, makedo.yml, or Makedo.yml")
+	return nil, errors.New("You must have a makedo file with one of the names: makedo.yaml, Makedo,yaml, makedo.yml, or Makedo.yml")
 }
 
 func run(cmd *cobra.Command, args []string) {
