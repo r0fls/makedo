@@ -37,8 +37,6 @@ var RootCmd = &cobra.Command{
 	Use:   "do",
 	Short: "Like make but with yaml.",
 	Long:  `Makefile syntax getting you down? Here you can just use yaml.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
 	Run: run,
 }
 
